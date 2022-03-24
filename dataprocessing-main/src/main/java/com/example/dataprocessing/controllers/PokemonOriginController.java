@@ -17,9 +17,9 @@ import java.util.Optional;
 @RestController
 @RequestMapping("/pokemonOrigins")
 public class PokemonOriginController {
+    @Autowired
     private PokemonOriginRepository service;
 
-    @CrossOrigin
     @GetMapping
     public Iterable<PokemonOriginModel> findAllPokemons() {
         return service.findAll();
@@ -41,6 +41,7 @@ public class PokemonOriginController {
     public PokemonOriginModel replacePokemonOrigin(@RequestBody PokemonOriginModel pokemonOriginModel, @PathVariable Integer id) {
         return service.findById(id)
                 .map(pokemon -> {
+                    pokemon.setIndex(pokemonOriginModel.getIndex());
                     pokemon.setPokedex_number(pokemonOriginModel.getPokedex_number());
                     pokemon.setName(pokemonOriginModel.getName());
                     pokemon.setGerman_name(pokemonOriginModel.getGerman_name());

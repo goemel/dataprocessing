@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    targetNamespace="https://www.w3schools.com"
+    xmlns="https://www.w3schools.com"
+    elementFormDefault="qualified">
+
+    <xs:element name="pokemon">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="index" type="xs:integer" />
+                <xs:element name="pokedexID" type="xs:integer" />
+                <xs:element name="name" type="xs:string" />
+                <xs:element name="germanName" type="xs:string" />
+                <xs:element name="japaneseName" type="xs:string" />
+                <xs:element name="height" type="xs:double" />
+                <xs:element name="weight" type="xs:double" />
+                <xs:element name="generation" type="xs:integer" />
+                <xs:element name="primaryType" type="xs:string" />
+                <xs:element name="secondaryType" type="xs:string" />
+                <xs:element name="classification" type="xs:string" />
+                <xs:element name="alternateForms" type="xs:string" />
+                <xs:element name="legendaryType" type="xs:boolean" />
+                <xs:element name="pokemon">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="hp" type="xs:integer" />
+                            <xs:element name="attack" type="xs:integer" />
+                            <xs:element name="specialAttack" type="xs:integer" />
+                            <xs:element name="defense" type="xs:integer" />
+                            <xs:element name="specialDefense" type="xs:integer" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>

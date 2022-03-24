@@ -17,6 +17,7 @@ import java.util.Optional;
 @RestController
 @RequestMapping("/pokemonStrategys")
 public class PokemonStrategyController {
+    @Autowired
     private PokemonStrategyRepository service;
 
     @CrossOrigin
@@ -46,13 +47,11 @@ public class PokemonStrategyController {
                     pokemon.setType1(pokemonStrategyModel.getType1());
                     pokemon.setType2(pokemonStrategyModel.getType2());
                     pokemon.setTotal(pokemonStrategyModel.getTotal());
+                    pokemon.setHP(pokemonStrategyModel.getHP());
                     pokemon.setAttack(pokemonStrategyModel.getAttack());
                     pokemon.setDefense(pokemonStrategyModel.getDefense());
                     pokemon.setSpAttack(pokemonStrategyModel.getSpAttack());
                     pokemon.setSpDefense(pokemonStrategyModel.getSpDefense());
-                    pokemon.setSpeed(pokemonStrategyModel.getSpeed());
-                    pokemon.setGeneration(pokemonStrategyModel.getGeneration());
-                    pokemon.setLegendary(pokemonStrategyModel.getLegendary());
                     return service.save(pokemon);
                 })
                 .orElseGet(() -> {

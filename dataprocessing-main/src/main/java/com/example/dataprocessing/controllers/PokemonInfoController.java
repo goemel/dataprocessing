@@ -3,8 +3,6 @@ package com.example.dataprocessing.controllers;
 import com.example.dataprocessing.models.PokemonInfoModel;
 import com.example.dataprocessing.repositories.PokemonInfoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.FieldError;
@@ -41,7 +39,7 @@ public class PokemonInfoController {
     public PokemonInfoModel create(@Valid @RequestBody PokemonInfoModel pokemonInfoModel) {
         return service.save(pokemonInfoModel);
     }@PutMapping("/{id}")
-    public PokemonInfoModel replacePokemonStragtegy(@RequestBody PokemonInfoModel pokemonInfoModel, @PathVariable Integer id) {
+    public PokemonInfoModel replacePokemonStrategy(@RequestBody PokemonInfoModel pokemonInfoModel, @PathVariable Integer id) {
         return service.findById(id)
                 .map(pokemon -> {
                     pokemon.setId(pokemonInfoModel.getId());

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="NL">
+
+<head>
+    <script src="pokemoninfo.js"></script>
+    <link rel="stylesheet" href="css.css" />
+</head>
+
+<body>
+    <div id="header">
+        <button class="header-btn" onclick="window.location.href='pokemoninfo.html'">See pokemon info!</button>
+        <button class="header-btn" onclick="window.location.href='pokemonstrategy.html'">See pokemon stats!</button>
+        <button class="header-btn" onclick="window.location.href='pokemonorigin.html'">See pokemon Origin!</button>
+    </div>
+    <br>
+    <h1>Enter a pokemon name to see info about the pokemon</h1>
+    <input type="text" placeholder="Pokemon name" id="pokemonname">
+    <input type="button" onclick="showone()" value="Submit" id="submit">
+    <div id="showOne"></div>
+    <br>
+    <table id="table">
+        <tr>
+            <th>Id</th>
+            <th>PokedexNumber</th>
+            <th class="classification">Name</th>
+            <th>AlternateForm</th>
+            <th>Height</th>
+            <th>Weight</th>
+            <th>PrimaryType</th>
+            <th class="classification">Classification</th>
+            <th>Legendary</th>
+            <th>Original pokemon</th>
+        </tr>
+        <tr id="info">
+
+        </tr>
+    </table>
+</body>
+
+</html>

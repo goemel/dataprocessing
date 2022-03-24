@@ -1,4 +1,6 @@
 package com.example.dataprocessing.models;
+
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
@@ -8,33 +10,26 @@ import javax.persistence.Table;
 public class PokemonInfoModel {
 
     @Id
+    @Column(name="PokemonId")
     private Integer id;
-    private int pokedexNumber;
+    @Column(name="PokedexNumber")
+    private Integer pokedexNumber;
+    @Column(name="PokemonName")
     private String name;
+    @Column(name="Classification")
     private String Classification;
+    @Column(name="AlternateFormName")
     private String alternateForm;
-    private int Orignal;
+    @Column(name="OriginalPokemonID")
+    private Integer Orignal;
+    @Column(name="LegendaryType")
     private String Legendary;
-    private double height;
-    private double weight;
+    @Column(name="PokemonHeight")
+    private Double height;
+    @Column(name="PokemonWeight")
+    private Double weight;
+    @Column(name="PrimaryType")
     private String primaryType;
-
-    public PokemonInfoModel(Integer id, int pokedexNumber, String name, String classification, String alternateForm, int orignal, String legendary, double height, double weight, String primaryType) {
-        this.id = id;
-        this.pokedexNumber = pokedexNumber;
-        this.name = name;
-        Classification = classification;
-        this.alternateForm = alternateForm;
-        Orignal = orignal;
-        Legendary = legendary;
-        this.height = height;
-        this.weight = weight;
-        this.primaryType = primaryType;
-    }
-
-    public PokemonInfoModel() {
-
-    }
 
     public Integer getId() {
         return id;
@@ -44,11 +39,11 @@ public class PokemonInfoModel {
         this.id = id;
     }
 
-    public int getPokedexNumber() {
+    public Integer getPokedexNumber() {
         return pokedexNumber;
     }
 
-    public void setPokedexNumber(int pokedexNumber) {
+    public void setPokedexNumber(Integer pokedexNumber) {
         this.pokedexNumber = pokedexNumber;
     }
 
@@ -76,11 +71,11 @@ public class PokemonInfoModel {
         this.alternateForm = alternateForm;
     }
 
-    public int getOrignal() {
+    public Integer getOrignal() {
         return Orignal;
     }
 
-    public void setOrignal(int orignal) {
+    public void setOrignal(Integer orignal) {
         Orignal = orignal;
     }
 
@@ -92,19 +87,19 @@ public class PokemonInfoModel {
         Legendary = legendary;
     }
 
-    public double getHeight() {
+    public Double getHeight() {
         return height;
     }
 
-    public void setHeight(double height) {
+    public void setHeight(Double height) {
         this.height = height;
     }
 
-    public double getWeight() {
+    public Double getWeight() {
         return weight;
     }
 
-    public void setWeight(double weight) {
+    public void setWeight(Double weight) {
         this.weight = weight;
     }
 

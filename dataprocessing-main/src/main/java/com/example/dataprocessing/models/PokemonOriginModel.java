@@ -1,4 +1,5 @@
 package com.example.dataprocessing.models;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
@@ -8,33 +9,27 @@ import javax.persistence.Table;
 public class PokemonOriginModel {
 
     @Id
+    @Column(name="Index")
     private Integer Index;
-    private int pokedex_number;
+    @Column(name="PokedexNumber")
+    private Integer pokedex_number;
+    @Column(name="PokemonName")
     private String name;
+    @Column(name="GermanName")
     private String german_name;
+    @Column(name="JapaneseName")
     private String japanese_name;
-    private int generation;
-    private int is_sub_legendary;
-    private int is_legendary;
-    private int is_mythical;
+    @Column(name="Generation")
+    private Integer generation;
+    @Column(name="IsSubLegendary")
+    private Integer is_sub_legendary;
+    @Column(name="IsLegendary")
+    private Integer is_legendary;
+    @Column(name="IsMythical")
+    private Integer is_mythical;
+    @Column(name="Species")
     private String species;
 
-    public PokemonOriginModel(Integer index, int pokedex_number, String name, String german_name, String japanese_name, int generation, int is_sub_legendary, int is_legendary, int is_mythical, String species) {
-        this.Index = index;
-        this.pokedex_number = pokedex_number;
-        this.name = name;
-        this.german_name = german_name;
-        this.japanese_name = japanese_name;
-        this.generation = generation;
-        this.is_sub_legendary = is_sub_legendary;
-        this.is_legendary = is_legendary;
-        this.is_mythical = is_mythical;
-        this.species = species;
-    }
-
-    public PokemonOriginModel() {
-
-    }
 
     public Integer getIndex() {
         return Index;
@@ -44,11 +39,11 @@ public class PokemonOriginModel {
         this.Index = index;
     }
 
-    public int getPokedex_number() {
+    public Integer getPokedex_number() {
         return pokedex_number;
     }
 
-    public void setPokedex_number(int pokedex_number) {
+    public void setPokedex_number(Integer pokedex_number) {
         this.pokedex_number = pokedex_number;
     }
 
@@ -76,35 +71,35 @@ public class PokemonOriginModel {
         this.japanese_name = japanese_name;
     }
 
-    public int getGeneration() {
+    public Integer getGeneration() {
         return generation;
     }
 
-    public void setGeneration(int generation) {
+    public void setGeneration(Integer generation) {
         this.generation = generation;
     }
 
-    public int getIs_sub_legendary() {
+    public Integer getIs_sub_legendary() {
         return is_sub_legendary;
     }
 
-    public void setIs_sub_legendary(int is_sub_legendary) {
+    public void setIs_sub_legendary(Integer is_sub_legendary) {
         this.is_sub_legendary = is_sub_legendary;
     }
 
-    public int getIs_legendary() {
+    public Integer getIs_legendary() {
         return is_legendary;
     }
 
-    public void setIs_legendary(int is_legendary) {
+    public void setIs_legendary(Integer is_legendary) {
         this.is_legendary = is_legendary;
     }
 
-    public int getIs_mythical() {
+    public Integer getIs_mythical() {
         return is_mythical;
     }
 
-    public void setIs_mythical(int is_mythical) {
+    public void setIs_mythical(Integer is_mythical) {
         this.is_mythical = is_mythical;
     }
 
