@@ -1,0 +1,50 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/goemel/dataprocessing",
+  "title": "Pokemon",
+  "description": "A pokemon",
+  "type": "object",
+  "properties": {
+    "pokemon_id": {
+      "description": "The unique number for a specific pokemon",
+      "type": "Integer"
+    },
+    "pokedex_number": {
+      "description": "The number for a specific pokemon",
+      "type": "Integer"
+    },
+    "pokemon_name": {
+      "description": "The english name for a specific pokemon",
+      "type": "string"
+    },
+    "classification": {
+      "description": "The classification for a specific pokemon",
+      "type": "string"
+    },
+    "alternate_form_name": {
+      "description": "The alternate form name for a specific pokemon",
+      "type": "string"
+    },
+    "original_pokemon_id": {
+      "description": "The original pokemon number of a pokemon",
+      "type": "Integer"
+    },
+    "legendary_type": {
+      "description": "To check if the pokemon is legendary",
+      "type": "String"
+    },
+    "pokemon_height": {
+      "description": "The height of the pokemon",
+      "type": "double"
+    },
+    "pokemon_weight": {
+      "description": "The weight of the pokemon",
+      "type": "double"
+    },
+    "primary_type": {
+      "description": "The primary typing for a pokemon",
+      "type": "String"
+    }
+  },
+  "required": [ "name"]
+}

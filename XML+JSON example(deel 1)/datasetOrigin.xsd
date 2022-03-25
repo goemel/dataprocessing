@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="https://www.w3schools.com"
+           xmlns="https://www.w3schools.com"
+           elementFormDefault="qualified">
+
+    <xs:element name="pokemon">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="index" type="xs:int" />
+                <xs:element name="pokedex_number" type="xs:string" />
+                <xs:element name="pokemon_name" type="xs:string" />
+                <xs:element name="german_name" type="xs:string" />
+                <xs:element name="japanese_name" type="xs:string" />
+                <xs:element name="generation" type="xs:string" />
+                <xs:element name="is_sub_legendary" type="xs:string" />
+                <xs:element name="is_legendary" type="xs:string" />
+                <xs:element name="is_mythical" type="xs:string" />
+                <xs:element name="species" type="xs:string" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

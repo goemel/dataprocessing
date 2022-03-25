@@ -1,0 +1,12 @@
+{
+  "pokemon_id": 1,
+  "pokedex_number": 1,
+  "pokemon_name": "Bulbasaur",
+  "classification": "Seed pokemon",
+  "alternate_form_name": null,
+  "original_pokemon_id": 0,
+  "legendary_type": null,
+  "pokemon_height": 0.7,
+  "pokemon_weight": 6.9,
+  "primary_type": "Grass"
+}
