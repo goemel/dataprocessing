@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" root="" standalone="yes"?>
+<dataset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance%22%3E">
+    <pokemon>
+        <pokemon_id>0</pokemon_id>
+        <pokedex_number>1</pokedex_number>
+        <pokemon_name>Bulbasaur</pokemon_name>
+        <classification>Bisasam</classification>
+        <alternate_form_name>Fushigidane</alternate_form_name>
+        <original_pokemon_id>0.7</original_pokemon_id>
+        <legendary_type>6.9</legendary_type>
+        <pokemon_height>seed pokemon</pokemon_height>
+        <pokemon_weight>null</pokemon_weight>
+        <primary_type>null</primary_type>
+    </pokemon>
+</dataset>

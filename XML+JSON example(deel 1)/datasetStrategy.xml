@@ -1,0 +1,15 @@
+
+<stats>
+    <pokedexnumber>1</pokedexnumber>
+    <name>"Bulbasaur"</name>
+    <primarytype>"Grass"</primarytype>
+    <secondarytype>"Poison"</secondarytype>
+    <sumstats>318</sumstats>
+    <stats>
+        <hp>45</hp>
+        <attack>49</attack>
+        <specialAttack>65</specialAttack>
+        <defense>49</defense>
+        <specialDefense>65</specialDefense>
+    </stats>
+</stats>

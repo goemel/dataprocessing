@@ -1,0 +1,14 @@
+{
+  "pokedexnumber": 1,
+  "name": "Bulbasaur",
+  "primarytype": "Grass",
+  "secondarytype": "Poison",
+  "sumstats": 318,
+  "stats": {
+    "hp": 45,
+    "attack": 49,
+    "specialAttack": 65,
+    "defense": 49,
+    "specialDefense": 65
+  }
+}

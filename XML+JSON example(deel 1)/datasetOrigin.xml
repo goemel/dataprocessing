@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" root="" standalone="yes"?>
+<dataset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance%22%3E">
+    <pokemon>
+        <index>0</index>
+        <pokedex_number>1</pokedex_number>
+        <pokemon_name>"Bulbasaur"</pokemon_name>
+        <german_name>"Bisasam"</german_name>
+        <japanese_name>"フシギダネ (Fushigidane)"</japanese_name>
+        <generation>1</generation>
+        <is_sub_legendary>0</is_sub_legendary>
+        <is_legendary>0</is_legendary>
+        <is_mythical>0</is_mythical>
+        <species>"Seed pokemon"</species>
+    </pokemon>
+</dataset>

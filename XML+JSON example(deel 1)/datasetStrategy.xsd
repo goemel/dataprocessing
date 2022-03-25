@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="https://www.w3schools.com"
+           xmlns="https://www.w3schools.com"
+           elementFormDefault="qualified">
+
+    <xs:element name="pokemon">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="pokedexnumber" type="xs:integer" />
+                <xs:element name="name" type="xs:string" />
+                <xs:element name="primarytype" type="xs:string" />
+                <xs:element name="secondarytype" type="xs:string" />
+                <xs:element name="sumstats" type="xs:integer" />
+                <xs:element name="stats">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="hp" type="xs:integer" />
+                            <xs:element name="attack" type="xs:integer" />
+                            <xs:element name="specialAttack" type="xs:integer" />
+                            <xs:element name="defense" type="xs:integer" />
+                            <xs:element name="specialDefense" type="xs:integer" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

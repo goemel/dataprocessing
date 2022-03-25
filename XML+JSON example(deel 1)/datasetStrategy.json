@@ -1,0 +1,52 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/goemel/dataprocessing",
+  "title": "Pokemon",
+  "description": "A pokemon",
+  "type": "object",
+  "properties": {
+      "pokedexnumber": {
+        "description": "The pokedex number for a pokemon.",
+        "type": "Integer"
+      },
+      "name": {
+        "description": "The name for a pokemon.",
+        "type": "String"
+      },
+      "primarytype {
+        "description": "The primary typing of a pokemon.",
+        "type": "String"
+      },
+      "secondarytype": {
+        "description": "The primary typing of a pokemon.",
+        "type": "intStringeger"
+      },
+      "sumstats": {
+        "description": "The total sum of stats for a pokemon.",
+        "type": "integer"
+      },
+    "stats": {
+      "hp": {
+        "description": "The hp for a pokemon.",
+        "type": "integer"
+      },
+      "attack": {
+        "description": "The attack for a specific pokemon",
+        "type": "integer"
+      },
+      "specialAttack": {
+        "description": "The special attack for a specific pokemon",
+        "type": "integer"
+      },
+      "defense": {
+        "description": "The defense for a specific pokemon",
+        "type": "integer"
+      },
+      "specialDefense": {
+        "description": "The special defense for a specific pokemon",
+        "type": "integer"
+      }
+    }
+
+  }
+}

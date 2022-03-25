@@ -1,0 +1,49 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/goemel/dataprocessing",
+  "title": "Pokemon",
+  "description": "A pokemon",
+  "type": "object",
+  "properties": {
+    "index": {
+      "description": "The index of a pokemon",
+      "type": "String"
+    },
+    "pokedex_number": {
+      "description": "The pokedex number for a pokemon.",
+      "type": "String"
+    },
+    "pokemon_name": {
+      "description": "The name for a pokemon.",
+      "type": "String"
+    },
+    "german_name": {
+      "description": "The name for a pokemon translated to german.",
+      "type": "String"
+    },
+    "japanese_name": {
+      "description": "The name for a pokemon translated to japanese.",
+      "type": "String"
+    },
+    "generation": {
+      "description": "The generation the pokemon was created in.",
+      "type": "String"
+    },
+    "is_sub_legendary": {
+      "description": "Check if the pokemon is sub legendary.",
+      "type": "String"
+    },
+    "is_legendary": {
+      "description": "Check if the pokemon is legendary.",
+      "type": "String"
+    },
+    "is_mythical": {
+      "description": "Check if the pokemon is mythical.",
+      "type": "String"
+    },
+    "species": {
+      "description": "to which species the pokemon belong.",
+      "type": "String"
+    }
+  }
+}

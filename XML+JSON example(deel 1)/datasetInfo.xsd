@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    targetNamespace="https://www.w3schools.com"
+    xmlns="https://www.w3schools.com"
+    elementFormDefault="qualified">
+
+    <xs:element name="pokemon">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="pokemon_id" type="xs:int" />
+                <xs:element name="pokedex_number" type="xs:int" />
+                <xs:element name="pokemon_name" type="xs:string" />
+                <xs:element name="classification" type="xs:string" />
+                <xs:element name="alternate_form_name" type="xs:string" />
+                <xs:element name="original_pokemon_id" type="xs:int" />
+                <xs:element name="legendary_type" type="xs:string" />
+                <xs:element name="pokemon_height" type="xs:double" />
+                <xs:element name="pokemon_weight" type="xs:double" />
+                <xs:element name="primary_type" type="xs:string" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
