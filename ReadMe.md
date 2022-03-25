@@ -1,6 +1,6 @@
 Download of clone de code naar uw device.
 
-Download de .idea.zip uit de mail en zet hem in dezelfde map als de readme.md.
+Download de .idea.zip uit de mail, zet hem in dezelfde map als de readme.md en pak hem uit.
 
 ##Database
 Zorg ervoor dat u de database importeert in uw database structuur
