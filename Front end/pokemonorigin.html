@@ -4,20 +4,24 @@
 <head>
     <script src="pokemonorigin.js"></script>
     <link rel="stylesheet" href="css.css" />
+    <script src="node_modules/chart.js/dist/Chart.js"></script>
 </head>
 
 <body>
-    <div id="header">
+    <!-- <div id="header">
         <button class="header-btn" onclick="window.location.href='pokemoninfo.html'">See pokemon info!</button>
         <button class="header-btn" onclick="window.location.href='pokemonstrategy.html'">See pokemon stats!</button>
         <button class="header-btn" onclick="window.location.href='pokemonorigin.html'">See pokemon Origin!</button>
-    </div><br>
-    <h1>Enter a pokemon name to see the pokemons origin</h1>
-    <input type="text" placeholder="Pokemon name" id="pokemonname">
-    <input type="button" onclick="showone()" value="Submit" id="submit">
-    <div id="showOne"></div>
+    </div><br> -->
+    <h1 id="baseText"></h1>
+    <canvas id="showOne"></canvas>
     <br>
-    <table id="table">
+    <h1 id="baseText2"></h1>
+    <canvas id="showTwo"></canvas>
+    <br>
+    <h1 id="baseText3"></h1>
+    <canvas id="showThree"></canvas>
+    <!-- <table id="table">
         <tr>
             <th>index</th>
             <th>PokedexNumber</th>
@@ -33,7 +37,7 @@
         <tr id="info">
 
         </tr>
-    </table>
+    </table> -->
 </body>
 
 </html>

@@ -1,5 +1,6 @@
 package com.example.dataprocessing.controllers;
 
+import com.example.dataprocessing.exceptions.ResourceNotfoundException;
 import com.example.dataprocessing.models.PokemonInfoModel;
 import com.example.dataprocessing.repositories.PokemonInfoRepository;
 import io.swagger.annotations.ApiOperation;
@@ -58,31 +59,32 @@ public class PokemonInfoController {
             value = "updatess the objects with the specific id from the database",
             notes = "This updates the row with the searched id.",
             response = PokemonInfoModel.class)
-    public PokemonInfoModel replacePokemonStrategy(@RequestBody @ApiParam(value = "Update pokemon with the id") @PathVariable PokemonInfoModel pokemonInfoModel,Integer id) {
-        return service.findById(id)
+    public PokemonInfoModel replacePokemonStrategy(@RequestBody @ApiParam(value = "Id of the pokemon that you want to update") @PathVariable(value = "id") int pokemonInfoId, @Valid @RequestBody PokemonInfoModel pokemonInfoModelDetails) throws ResourceNotfoundException {
+        return service.findById(pokemonInfoId)
                 .map(pokemon -> {
-                    pokemon.setId(pokemonInfoModel.getId());
-                    pokemon.setPokedexNumber(pokemonInfoModel.getPokedexNumber());
-                    pokemon.setName(pokemonInfoModel.getName());
-                    pokemon.setClassification(pokemonInfoModel.getClassification());
-                    pokemon.setAlternateForm(pokemonInfoModel.getAlternateForm());
-                    pokemon.setOrignal(pokemonInfoModel.getOrignal());
-                    pokemon.setLegendary(pokemonInfoModel.getLegendary());
-                    pokemon.setHeight(pokemonInfoModel.getHeight());
-                    pokemon.setWeight(pokemonInfoModel.getWeight());
-                    pokemon.setPrimaryType(pokemonInfoModel.getPrimaryType());
+                    pokemon.setId(pokemonInfoModelDetails.getId());
+                    pokemon.setPokedexNumber(pokemonInfoModelDetails.getPokedexNumber());
+                    pokemon.setName(pokemonInfoModelDetails.getName());
+                    pokemon.setClassification(pokemonInfoModelDetails.getClassification());
+                    pokemon.setAlternateForm(pokemonInfoModelDetails.getAlternateForm());
+                    pokemon.setOrignal(pokemonInfoModelDetails.getOrignal());
+                    pokemon.setLegendary(pokemonInfoModelDetails.getLegendary());
+                    pokemon.setHeight(pokemonInfoModelDetails.getHeight());
+                    pokemon.setWeight(pokemonInfoModelDetails.getWeight());
+                    pokemon.setPrimaryType(pokemonInfoModelDetails.getPrimaryType());
                     return service.save(pokemon);
                 })
-                .orElseGet(() -> {
-                    pokemonInfoModel.setId(id);
-                    return service.save(pokemonInfoModel);
-                });
+                .orElseThrow(() -> new ResourceNotfoundException("There is no pokemon with the id:"+ pokemonInfoId));
     }
     @DeleteMapping("/{id}")
     @ApiOperation(
             value = "Deletes an item with a specific id.")
-    void deletePokemonStrategy(@ApiParam(value = "Delete an row with a specific id.") @PathVariable Integer id) {
-        service.deleteById(id);
+    public Map<String, Boolean> deletePokemonStrategy(@ApiParam(value = "Delete an row with a specific id.") @PathVariable Integer id) throws Exception {
+        PokemonInfoModel pokemonInfoModel = service.findById(id).orElseThrow(() -> new ResourceNotfoundException("There is no pokemon with the id:"+ id));
+        service.delete(pokemonInfoModel);
+        Map<String, Boolean> response = new HashMap<>();
+        response.put("Deleted", true);
+        return response;
     }
 
     @ResponseStatus(HttpStatus.BAD_REQUEST)

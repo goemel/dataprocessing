@@ -1,5 +1,6 @@
 package com.example.dataprocessing.controllers;
 
+import com.example.dataprocessing.exceptions.ResourceNotfoundException;
 import com.example.dataprocessing.models.PokemonInfoModel;
 import com.example.dataprocessing.models.PokemonOriginModel;
 import com.example.dataprocessing.repositories.PokemonOriginRepository;
@@ -58,31 +59,32 @@ public class PokemonOriginController {
             value = "updatess the objects with the specific id from the database",
             notes = "This updates the row with the searched id.",
             response = PokemonInfoModel.class)
-    public PokemonOriginModel replacePokemonOrigin(@RequestBody PokemonOriginModel pokemonOriginModel, @ApiParam(value = "Update pokemon with the id") @PathVariable Integer id) {
-        return service.findById(id)
+    public PokemonOriginModel replacePokemonOrigin(@RequestBody @ApiParam(value = "Id of the pokemon that you want to update") @PathVariable(value = "id") int pokemonOriginId, @Valid @RequestBody PokemonOriginModel pokemonOriginModelDetails) throws ResourceNotfoundException {
+        return service.findById(pokemonOriginId)
                 .map(pokemon -> {
-                    pokemon.setIndex(pokemonOriginModel.getIndex());
-                    pokemon.setPokedex_number(pokemonOriginModel.getPokedex_number());
-                    pokemon.setName(pokemonOriginModel.getName());
-                    pokemon.setGerman_name(pokemonOriginModel.getGerman_name());
-                    pokemon.setJapanese_name(pokemonOriginModel.getJapanese_name());
-                    pokemon.setGeneration(pokemonOriginModel.getGeneration());
-                    pokemon.setIs_mythical(pokemonOriginModel.getIs_mythical());
-                    pokemon.setIs_sub_legendary(pokemonOriginModel.getIs_sub_legendary());
-                    pokemon.setIs_legendary(pokemonOriginModel.getIs_legendary());
-                    pokemon.setSpecies(pokemonOriginModel.getSpecies());
+                    pokemon.setIndex(pokemonOriginModelDetails.getIndex());
+                    pokemon.setPokedex_number(pokemonOriginModelDetails.getPokedex_number());
+                    pokemon.setName(pokemonOriginModelDetails.getName());
+                    pokemon.setGerman_name(pokemonOriginModelDetails.getGerman_name());
+                    pokemon.setJapanese_name(pokemonOriginModelDetails.getJapanese_name());
+                    pokemon.setGeneration(pokemonOriginModelDetails.getGeneration());
+                    pokemon.setIs_mythical(pokemonOriginModelDetails.getIs_mythical());
+                    pokemon.setIs_sub_legendary(pokemonOriginModelDetails.getIs_sub_legendary());
+                    pokemon.setIs_legendary(pokemonOriginModelDetails.getIs_legendary());
+                    pokemon.setSpecies(pokemonOriginModelDetails.getSpecies());
                     return service.save(pokemon);
                 })
-                .orElseGet(() -> {
-                    pokemonOriginModel.setIndex(id);
-                    return service.save(pokemonOriginModel);
-                });
+                .orElseThrow(() -> new ResourceNotfoundException("There is no pokemon with the id:"+ pokemonOriginId));
     }
     @DeleteMapping("/{id}")
     @ApiOperation(
             value = "Deletes an item with a specific id.")
-    void deletePokemonOrigin(@PathVariable @ApiParam(value = "Update pokemon with the id") Integer id) {
-        service.deleteById(id);
+    public Map<String, Boolean> deletePokemonOrigin(@PathVariable @ApiParam(value = "Update pokemon with the id") Integer id) throws Exception {
+        PokemonOriginModel pokemonOriginModel = service.findById(id).orElseThrow(() -> new ResourceNotfoundException("There is no pokemon with the id:"+ id));
+        service.delete(pokemonOriginModel);
+        Map<String, Boolean> response = new HashMap<>();
+        response.put("Deleted", true);
+        return response;
     }
 
     @ResponseStatus(HttpStatus.BAD_REQUEST)

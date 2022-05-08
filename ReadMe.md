@@ -28,3 +28,38 @@ Als je naar de website wil die in verbinding staat met de website die
 met de api samenhangt, ga naar het mapje Front-end en druk op een .html file.
 
 Op de HTML pagina kan je op zoek naar bijvoorbeeld stats, vertalingen of informatie over een bepaalde pokemon die je zelf in moet voeren.
+
+##Feedback
+U gaf aan dat de volgende put niet werkt
+```
+{
+"id": 1,
+"pokedexNumber": 2,
+"name": "Ivysaurx",
+"alternateForm": "",
+"height": 1.0,
+"weight": 13.0,
+"primaryType": "Grass",
+"classification": "Seed Pokemon",
+"orignal": null,
+"legendary": ""
+}
+```
+Als u het op de volgende manier doet werkt het wel (in dit geval pas je de primarytype aan naar poison)
+```
+{
+  "id": 1,
+  "pokedexNumber": 1,
+  "name": "\"Bulbasaurx\"",
+  "alternateForm": "",
+  "height": 0.7,
+  "weight": 6.9,
+  "primaryType": "\"poison\"",
+  "classification": "\"Seed Pokemon\"",
+  "legendary": "",
+  "orignal": null
+}
+```
+/pokemonInfos does not return anything when Accept: application/xml is passed as header
+
+Voor ons is bekend dat alleen de Json of alleen de XML moet werken. De Json werkt op mijn project

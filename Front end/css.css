@@ -1,24 +1,24 @@
-body{
-    background-image: url("bg1.png");
+body {
+    background: white;
 }
 
 
-table{
+table {
     text-align: left;
     border-bottom: 1px solid black;
     border-right: 1px solid black;
     font-size: 30px;
 }
 
-tr{
+tr {
     border: solid 1px black
 }
 
-.classification{
-    width: 200px!important;
+.classification {
+    width: 200px !important;
 }
 
-#submit{
+#submit {
     background: none;
     height: 100px;
     width: 200px;
@@ -28,7 +28,7 @@ tr{
     border-radius: 15px;
 }
 
-#submit:hover{
+#submit:hover {
     background: green;
     height: 100px;
     font-size: 30px;
@@ -36,7 +36,7 @@ tr{
     border-radius: 15px;
 }
 
-#pokemonname{
+#pokemonname {
     background: none;
     height: 100px;
     width: 300px;
@@ -46,14 +46,15 @@ tr{
     border-radius: 15px;
 }
 
-th, td{
-    height:75px;
+th,
+td {
+    height: 75px;
     border-left: 1px solid black;
     border-top: 1px solid black;
     width: 100px;
 }
 
-.header-btn{
+.header-btn {
     background: none;
     height: 100px;
     font-size: 30px;
@@ -62,7 +63,7 @@ th, td{
     border-radius: 15px;
 }
 
-.header-btn:hover{
+.header-btn:hover {
     background: green;
     height: 100px;
     font-size: 30px;
