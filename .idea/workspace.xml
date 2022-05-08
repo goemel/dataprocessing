@@ -6,13 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="c5a5bf99-cb73-4b79-8292-2c9b3e1bb1c9" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataprocessing-main/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/dataprocessing-main/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataprocessing-main/src/main/java/com/example/dataprocessing/controllers/PokemonInfoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/dataprocessing-main/src/main/java/com/example/dataprocessing/controllers/PokemonInfoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataprocessing-main/src/main/java/com/example/dataprocessing/controllers/PokemonOriginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/dataprocessing-main/src/main/java/com/example/dataprocessing/controllers/PokemonOriginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataprocessing-main/src/main/java/com/example/dataprocessing/controllers/PokemonStrategyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/dataprocessing-main/src/main/java/com/example/dataprocessing/controllers/PokemonStrategyController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataprocessing-main/target/classes/com/example/dataprocessing/controllers/PokemonInfoController.class" beforeDir="false" afterPath="$PROJECT_DIR$/dataprocessing-main/target/classes/com/example/dataprocessing/controllers/PokemonInfoController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataprocessing-main/target/classes/com/example/dataprocessing/controllers/PokemonOriginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/dataprocessing-main/target/classes/com/example/dataprocessing/controllers/PokemonOriginController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataprocessing-main/target/classes/com/example/dataprocessing/controllers/PokemonStrategyController.class" beforeDir="false" afterPath="$PROJECT_DIR$/dataprocessing-main/target/classes/com/example/dataprocessing/controllers/PokemonStrategyController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReadMe.md" beforeDir="false" afterPath="$PROJECT_DIR$/ReadMe.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,7 +81,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1652019584361</updated>
-      <workItem from="1652019586348" duration="10687000" />
+      <workItem from="1652019586348" duration="10780000" />
     </task>
     <servers />
   </component>

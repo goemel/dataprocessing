@@ -60,6 +60,3 @@ Als u het op de volgende manier doet werkt het wel (in dit geval pas je de prima
   "orignal": null
 }
 ```
-/pokemonInfos does not return anything when Accept: application/xml is passed as header
-
-Voor ons is bekend dat alleen de Json of alleen de XML moet werken. De Json werkt op mijn project
