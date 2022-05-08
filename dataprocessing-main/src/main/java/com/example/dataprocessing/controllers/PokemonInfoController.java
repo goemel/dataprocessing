@@ -20,7 +20,7 @@ import java.util.Map;
 import java.util.Optional;
 
 @RestController
-@RequestMapping(value = "/pokemonInfos", produces = {MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE})
+@RequestMapping(value = "/pokemonInfos",  produces = {MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE}, consumes = MediaType.ALL_VALUE)
 public class PokemonInfoController {
     @Autowired
     private PokemonInfoRepository service;
@@ -77,8 +77,8 @@ public class PokemonInfoController {
                 .orElseThrow(() -> new ResourceNotfoundException("There is no pokemon with the id:"+ pokemonInfoId));
     }
     @DeleteMapping("/{id}")
-    @ApiOperation(
-            value = "Deletes an item with a specific id.")
+    @ResponseBody
+    @ApiOperation(value = "Deletes an item with a specific id.")
     public Map<String, Boolean> deletePokemonStrategy(@ApiParam(value = "Delete an row with a specific id.") @PathVariable Integer id) throws Exception {
         PokemonInfoModel pokemonInfoModel = service.findById(id).orElseThrow(() -> new ResourceNotfoundException("There is no pokemon with the id:"+ id));
         service.delete(pokemonInfoModel);
