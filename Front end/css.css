@@ -1,57 +1,5 @@
 body {
-    background: white;
-}
-
-
-table {
-    text-align: left;
-    border-bottom: 1px solid black;
-    border-right: 1px solid black;
-    font-size: 30px;
-}
-
-tr {
-    border: solid 1px black
-}
-
-.classification {
-    width: 200px !important;
-}
-
-#submit {
-    background: none;
-    height: 100px;
-    width: 200px;
-    font-size: 30px;
-    margin-right: 15px;
-    border: 1px solid black;
-    border-radius: 15px;
-}
-
-#submit:hover {
-    background: green;
-    height: 100px;
-    font-size: 30px;
-    margin-right: 15px;
-    border-radius: 15px;
-}
-
-#pokemonname {
-    background: none;
-    height: 100px;
-    width: 300px;
-    font-size: 36px;
-    margin-right: 15px;
-    border: 1px solid black;
-    border-radius: 15px;
-}
-
-th,
-td {
-    height: 75px;
-    border-left: 1px solid black;
-    border-top: 1px solid black;
-    width: 100px;
+    background-image: url('bg1.png');
 }
 
 .header-btn {
